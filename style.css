@@ -33,11 +33,19 @@
 }
 
 .name {
-  border: 2px solid rgba(0, 0, 0, 0.5);
-  width: 130px;
+  width: 150px;
   height: 28px;
   padding: 0px 15px;
-  font-size: 1em;
+  font-size: 1.1em;
+  text-align: center;
+  border: none;
+  background: inherit;
+  outline: none;
+  color: white;
+}
+
+.name::placeholder {
+  color: white;
 }
 
 .grettings {
