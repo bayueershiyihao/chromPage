@@ -182,15 +182,6 @@ button {
   cursor: pointer;
 }
 
-canvas {
-  z-index: 1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #eee;
-}
-
 .calculator {
   position: absolute;
   top: 50%;
@@ -246,4 +237,54 @@ canvas {
 
 .showing2 {
   display: none;
+}
+
+.canvas-contains {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+canvas {
+  border-radius: 20px;
+  background-color: #eee;
+}
+
+.canvas-buttons {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.canvas-buttons button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+}
+
+.canvas-buttons button:active {
+  box-shadow: inset 30px 30px rgba(0, 0, 0, 0.2);
+}
+
+.canvas-buttons .button-black {
+  background-color: black;
+}
+
+.canvas-buttons .button-red {
+  background-color: red;
+}
+
+.canvas-buttons .button-blue {
+  background-color: blue;
+}
+
+.canvas-buttons .button-yellow {
+  background-color: yellow;
+}
+
+.canvas-buttons .button-green {
+  background-color: green;
 }

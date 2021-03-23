@@ -5,8 +5,10 @@ function showing() {
     e.addEventListener("click", (item) => {
       const target = item.target;
       if (target.classList.contains("fa-palette")) {
+        const button = document.querySelector(".canvas-buttons");
         const canvas = document.querySelector("canvas");
         canvas.classList.toggle("showing");
+        button.classList.toggle("showing");
       }
       if (target.classList.contains("fa-calculator")) {
         const calculator = document.querySelector(".calculator");
