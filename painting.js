@@ -7,6 +7,7 @@ let mousePointerX = canvas.width / 2;
 let mousePointerY = canvas.height / 2;
 
 const buttonsPaint = document.querySelectorAll(".canvas-buttons button");
+const canvasRange = document.querySelector(".canvas-range");
 
 window.addEventListener("resize", () => {
   canvas.width = document.body.clientWidth * 0.7;
@@ -69,6 +70,12 @@ function changeBrushStyle() {
   });
 }
 
+function changeRange() {
+  canvasRange.addEventListener("change", () => {
+    size = canvasRange.value;
+  });
+}
+
 function resetArcDraw() {
   const palette = document.querySelector(".fa-palette");
   const button = document.querySelector(".canvas-buttons");
@@ -85,6 +92,7 @@ function init() {
   arcDraw();
   changeBrushStyle();
   resetArcDraw();
+  changeRange();
 }
 
 init();

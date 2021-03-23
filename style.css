@@ -263,6 +263,7 @@ canvas {
   border-radius: 50%;
   border: none;
   outline: none;
+  margin: 0px 3px;
 }
 
 .canvas-buttons button:active {
@@ -287,4 +288,8 @@ canvas {
 
 .canvas-buttons .button-green {
   background-color: green;
+}
+
+.canvas-range {
+  width: 100px;
 }
