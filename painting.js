@@ -70,12 +70,6 @@ function changeBrushStyle() {
   });
 }
 
-function changeRange() {
-  canvasRange.addEventListener("change", () => {
-    size = canvasRange.value;
-  });
-}
-
 function resetArcDraw() {
   const palette = document.querySelector(".fa-palette");
   const button = document.querySelector(".canvas-buttons");
@@ -92,7 +86,9 @@ function init() {
   arcDraw();
   changeBrushStyle();
   resetArcDraw();
-  changeRange();
+  canvasRange.addEventListener("change", () => {
+    size = canvasRange.value;
+  });
 }
 
 init();
