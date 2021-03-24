@@ -33,8 +33,12 @@ function showing() {
       }
       if (target.classList.contains("fa-keyboard")) {
         typingGame.classList.toggle("showing");
-        timerCount();
 
+        if (!typingGame.classList.contains("showing")) {
+          timerCount();
+        } else {
+          clearInterval(timerInterval);
+        }
         if (!appCanvas.classList.contains("showing")) {
           appCanvas.classList.toggle("showing");
           button.classList.toggle("showing");
