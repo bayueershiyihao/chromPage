@@ -10,25 +10,37 @@ function showing() {
       if (target.classList.contains("fa-palette")) {
         appCanvas.classList.toggle("showing");
         button.classList.toggle("showing");
+        clearInterval(timerInterval);
 
         if (!calculator.classList.contains("showing")) {
           calculator.classList.toggle("showing");
         }
+        if (!typingGame.classList.toggle("showing")) {
+          typingGame.classList.toggle("showing");
+        }
       }
       if (target.classList.contains("fa-calculator")) {
         calculator.classList.toggle("showing");
+        clearInterval(timerInterval);
 
         if (!appCanvas.classList.contains("showing")) {
           appCanvas.classList.toggle("showing");
           button.classList.toggle("showing");
+        }
+        if (!typingGame.classList.toggle("showing")) {
+          typingGame.classList.toggle("showing");
         }
       }
       if (target.classList.contains("fa-keyboard")) {
         typingGame.classList.toggle("showing");
         timerCount();
+
         if (!appCanvas.classList.contains("showing")) {
           appCanvas.classList.toggle("showing");
           button.classList.toggle("showing");
+        }
+        if (!calculator.classList.contains("showing")) {
+          calculator.classList.toggle("showing");
         }
       }
     });

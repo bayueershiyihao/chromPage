@@ -58,7 +58,7 @@ function gameOver() {
 function gameTimer() {
   gameTimerSet--;
   timer.innerText = gameTimerSet;
-  console.log(gameTimerSet);
+
   if (gameTimerSet === 0) {
     clearInterval(timerInterval);
     gameOver();
@@ -71,7 +71,6 @@ function gameScore(value) {
 
 function init() {
   typingGameForm.addEventListener("submit", submitHandler);
-  gameTimer();
 }
 
 init();
