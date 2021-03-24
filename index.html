@@ -30,6 +30,7 @@
       <li class="app-item">
         <i class="fas fa-calculator item-calculator"></i>
       </li>
+      <li class="app-item"><i class="fas fa-keyboard"></i></li>
     </ul>
 
     <div class="canvas-contains">
@@ -44,7 +45,7 @@
       </div>
     </div>
 
-    <div class="calculator showing2">
+    <div class="calculator showing">
       <input class="calculator-input" type="text" name="" id="" />
       <button class="clear">C</button>
       <button value="7">7</button>
@@ -64,6 +65,27 @@
       <button class="division">/</button>
     </div>
 
+    <div class="typingGame showing">
+      <h1 class="title">Speed Typer</h1>
+      <div class="scoreboard">
+        <div class="timer">
+          <span class="timer-text">timer</span>
+          <span class="timers">0:0</span>
+        </div>
+        <div class="score">
+          <span class="score-text">score</span>
+          <span class="scores">0</span>
+        </div>
+      </div>
+      <div class="question-div">
+        <span>Type the following</span>
+        <h1 class="question">배</h1>
+      </div>
+      <form action="">
+        <input class="answer" type="text" placeholder="Type the word here..." />
+      </form>
+    </div>
+
     <script src="clock.js"></script>
     <script src="gretting.js"></script>
     <script src="bg.js"></script>
@@ -72,6 +94,7 @@
     <script src="app.js"></script>
     <script src="painting.js"></script>
     <script src="calculator.js"></script>
+    <script src="typing.js"></script>
     <script
       src="https://kit.fontawesome.com/6478f529f2.js"
       crossorigin="anonymous"

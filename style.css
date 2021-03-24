@@ -66,10 +66,6 @@ body {
   margin-bottom: 20px;
 }
 
-.showing {
-  display: none;
-}
-
 .bg-img {
   z-index: -1;
   position: absolute;
@@ -235,10 +231,6 @@ button {
   box-shadow: inset 120px 60px rgba(0, 0, 0, 0.2);
 }
 
-.showing2 {
-  display: none;
-}
-
 .canvas-contains {
   position: absolute;
   top: 50%;
@@ -292,4 +284,69 @@ canvas {
 
 .canvas-range {
   width: 100px;
+}
+
+.typingGame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 500px;
+  height: 250px;
+  border-radius: 30px;
+  background-color: #34495e;
+  color: white;
+}
+
+.typingGame .title {
+  font-style: 2rem;
+  background-color: #243341;
+  width: 90%;
+  padding: 5px 0;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.typingGame .scoreboard {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.typingGame .timer,
+.typingGame .score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.typingGame .question-div {
+  text-align: center;
+}
+
+.typingGame form {
+  width: 100%;
+  text-align: center;
+}
+
+.typingGame .answer {
+  width: 60%;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  padding: 0px 15px;
+}
+
+.showing {
+  display: none;
+}
+
+.typingGame button {
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
 }
