@@ -5,7 +5,7 @@ const typingGameForm = document.querySelector(".typingGame form");
 const timer = document.querySelector(".timers");
 const score = document.querySelector(".scores");
 
-const aaa = [
+const typingWords = [
   "옛뿌리",
   "섟",
   "샛검불",
@@ -22,9 +22,12 @@ const aaa = [
   "덧기둥",
   "돌꼇잠",
   "두바퀴굴림",
+  "dormant",
+  "equivocal",
+  "substantive",
 ];
 let pointScore = 0;
-let gameTimerSet = 10;
+let gameTimerSet = 18;
 let timerInterval;
 
 function timerCount() {
@@ -32,13 +35,17 @@ function timerCount() {
 }
 
 function resultGame(text) {
-  const random = Math.floor(Math.random() * aaa.length);
+  const random = Math.floor(Math.random() * typingWords.length);
   if (text == question.innerText) {
-    question.innerText = aaa[random];
+    question.innerText = typingWords[random];
     pointScore++;
     gameTimerSet += 1;
     gameScore(pointScore);
+    if (typingWords.length < 1) {
+      gameOver();
+    }
   }
+  typingWords.splice(random, 1);
 }
 
 function submitHandler(e) {
